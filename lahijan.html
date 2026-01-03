@@ -315,39 +315,54 @@
     .section-head h2{ margin:0; font-size: 22px; letter-spacing: -.2px; }
     .section-head p{ margin:0; color: var(--muted); max-width: 70ch; font-size: 14px; font-weight:800; }
 
-    .grid-3{
+    /* Services icon style */
+    .services-icons{
       display:grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 14px;
+      align-items: stretch;
+      margin-top: 14px;
     }
-    .card{
-      border:1px solid var(--border);
+    .service-icon-card{
+      border: 1px solid var(--border);
       background: rgba(255,255,255,.92);
-      border-radius: var(--radius);
-      padding: 16px;
+      border-radius: 18px;
       box-shadow: var(--shadow2);
+      padding: 18px 14px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      gap: 12px;
+      text-align:center;
       transition: transform .15s ease, border-color .15s ease, background .15s ease;
-      min-height: 132px;
+      min-height: 140px;
     }
-    .card:hover{
+    .service-icon-card:hover{
       transform: translateY(-2px);
       border-color: rgba(255,155,0,.45);
-      background: rgba(255,155,0,.08);
+      background: rgba(255,155,0,.06);
     }
-    .card .top{
-      display:flex; align-items:center; justify-content:space-between;
-      margin-bottom: 10px;
-      gap: 10px;
+    .service-ico{
+      width: 66px;
+      height: 66px;
+      border-radius: 20px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background: rgba(255,155,0,.12);
+      border: 1px solid rgba(255,155,0,.22);
     }
-    .card .iconbox{
-      width:42px;height:42px;border-radius: 16px;
-      display:flex; align-items:center; justify-content:center;
-      background: rgba(255,155,0,.14);
-      border:1px solid rgba(255,155,0,.26);
-      flex:0 0 auto;
+    .svc-svg{
+      width: 34px;
+      height: 34px;
+      color: rgba(18,24,38,.78);
     }
-    .card h3{ margin:0; font-size: 16px; letter-spacing:-.15px; }
-    .card p{ margin:0; color: var(--muted); font-size: 14px; font-weight:800; }
+    .service-title{
+      font-weight: 900;
+      font-size: 15px;
+      color: rgba(18,24,38,.86);
+    }
 
     /* Partner logos */
     .partners{
@@ -597,7 +612,7 @@
       .burger{ display:inline-flex; }
       .hero-grid{ grid-template-columns: 1fr; }
       .hero-side{ min-height: auto; }
-      .grid-3{ grid-template-columns: 1fr; }
+      .services-icons{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .form-wrap{ grid-template-columns: 1fr; }
       .contact-grid{ grid-template-columns: 1fr; }
       form{ grid-template-columns: 1fr; }
@@ -608,6 +623,8 @@
       .topbar .row{ font-size:12px; }
       .nav{ padding: 12px 0; }
       .hero-content{ padding: 22px; }
+      .services-icons{ grid-template-columns: 1fr; }
+      .service-icon-card{ min-height: 128px; }
       .partner-box{ min-height: 82px; }
       .partner-box img{ max-height: 40px; }
     }
@@ -768,46 +785,65 @@
       </div>
     </div>
 
-    <!-- Services -->
+    <!-- ✅ Services (Icon style like sample) -->
     <section id="services">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head" style="justify-content:center; text-align:center;">
           <div>
-            <h2>خدمات نمایندگی لاهیجان</h2>
-            <p>سرویس‌ها برای ارسال سریع، دقت در تحویل و پشتیبانی واقعی.</p>
+            <h2 style="margin-bottom:6px;">خدمات دکا پست لاهیجان</h2>
+            <!-- اگر نمی‌خواهی توضیح باشد، این خط را حذف کن -->
+            <p style="margin:0 auto; max-width:70ch;">خدمات اصلی نمایندگی لاهیجان</p>
           </div>
         </div>
 
-        <div class="grid-3" role="list">
-          <article class="card" role="listitem">
-            <div class="top">
-              <div class="iconbox" aria-hidden="true">
-                <svg class="icon accent" viewBox="0 0 24 24"><path d="M12 2 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-3Zm-1 15-4-4 1.41-1.41L11 14.17l5.59-5.58L18 10l-7 7Z"/></svg>
-              </div>
-              <h3>جمع‌آوری در محل</h3>
-            </div>
-            <p>هماهنگی دریافت مرسوله از محل شما در لاهیجان.</p>
-          </article>
+        <div class="services-icons" role="list" aria-label="خدمات">
+          <a class="service-icon-card" href="#request" role="listitem">
+            <span class="service-ico" aria-hidden="true">
+              <!-- Warehouse / pickup -->
+              <svg viewBox="0 0 24 24" class="svc-svg">
+                <path d="M4 10.5 12 5l8 5.5V20a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1v-9.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                <path d="M9 12h6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="service-title">جمع‌آوری در محل</span>
+          </a>
 
-          <article class="card" role="listitem">
-            <div class="top">
-              <div class="iconbox" aria-hidden="true">
-                <svg class="icon accent" viewBox="0 0 24 24"><path d="M20 8h-3V4H3v13h2a3 3 0 0 0 6 0h6a3 3 0 0 0 6 0h1v-5l-4-4Z"/></svg>
-              </div>
-              <h3>ارسال بین‌شهری</h3>
-            </div>
-            <p>ارسال به شهرهای مختلف با فرآیند استاندارد.</p>
-          </article>
+          <a class="service-icon-card" href="https://tracking.dekapost.ir" target="_blank" rel="noopener" role="listitem">
+            <span class="service-ico" aria-hidden="true">
+              <!-- Tracking -->
+              <svg viewBox="0 0 24 24" class="svc-svg">
+                <path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11Z" fill="none" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M12 10.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" fill="none" stroke="currentColor" stroke-width="1.8"/>
+              </svg>
+            </span>
+            <span class="service-title">رهگیری مرسوله</span>
+          </a>
 
-          <article class="card" role="listitem">
-            <div class="top">
-              <div class="iconbox" aria-hidden="true">
-                <svg class="icon accent" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-4 12.74V22l4-2 4 2v-7.26A7 7 0 0 0 12 2Zm0 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10Z"/></svg>
-              </div>
-              <h3>پشتیبانی محلی</h3>
-            </div>
-            <p>واتساپ و تماس مستقیم برای هماهنگی و پیگیری.</p>
-          </article>
+          <a class="service-icon-card" href="#contact" role="listitem">
+            <span class="service-ico" aria-hidden="true">
+              <!-- Support -->
+              <svg viewBox="0 0 24 24" class="svc-svg">
+                <path d="M4 12a8 8 0 0 1 16 0v4a2 2 0 0 1-2 2h-2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M6.5 12v4a1.5 1.5 0 0 1-3 0v-2a2 2 0 0 1 2-2h1Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                <path d="M17.5 12v4a1.5 1.5 0 0 0 3 0v-2a2 2 0 0 0-2-2h-1Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                <path d="M10 18h5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <span class="service-title">پشتیبانی مشتریان</span>
+          </a>
+
+          <a class="service-icon-card" href="https://price.dekapost.ir" target="_blank" rel="noopener" role="listitem">
+            <span class="service-ico" aria-hidden="true">
+              <!-- Shipping -->
+              <svg viewBox="0 0 24 24" class="svc-svg">
+                <path d="M3 7h11v10H3V7Z" fill="none" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M14 10h3l4 4v3h-7v-7Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                <path d="M7 19.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z" fill="none" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M18 19.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z" fill="none" stroke="currentColor" stroke-width="1.8"/>
+              </svg>
+            </span>
+            <span class="service-title">ارسال بین‌شهری</span>
+          </a>
         </div>
       </div>
     </section>
@@ -823,13 +859,13 @@
         </div>
 
         <div class="partners" aria-label="Partner logos">
-          <div class="partner-box"><img alt="Partner logo 1" src="https://dekapost.com/_douranportal/images/jpeg-optimizer_logo6.png"></div>
-          <div class="partner-box"><img alt="Partner logo 2" src="https://dekapost.com/_douranportal/images/jpeg-optimizer_logo5.png"></div>
-          <div class="partner-box"><img alt="Partner logo 3" src="https://dekapost.com/_douranportal/images/jpeg-optimizer_logo4.png"></div>
-          <div class="partner-box"><img alt="Partner logo 4" src="https://dekapost.com/_douranportal/images/jpeg-optimizer_logo3.png"></div>
+          <div class="partner-box"><img alt="Partner logo 1" src="https://setai.no/logos/dekapost/logo1.png"></div>
+          <div class="partner-box"><img alt="Partner logo 2" src="https://setai.no/logos/dekapost/logo2.png"></div>
+          <div class="partner-box"><img alt="Partner logo 3" src="https://setai.no/logos/dekapost/logo3.png"></div>
+          <div class="partner-box"><img alt="Partner logo 4" src="https://setai.no/logos/dekapost/logo4.png"></div>
 
-          <div class="partner-box"><img alt="Partner logo 5" src="https://dekapost.com/_douranportal/images/jpeg-optimizer_logo2.png"></div>
-          <div class="partner-box"><img alt="Partner logo 6" src="https://dekapost.com/_douranportal/images/jpeg-optimizer_logo1.png"></div>
+          <div class="partner-box"><img alt="Partner logo 5" src="https://setai.no/logos/dekapost/logo5.png"></div>
+          <div class="partner-box"><img alt="Partner logo 6" src="https://setai.no/logos/dekapost/logo6.png"></div>
         </div>
       </div>
     </section>

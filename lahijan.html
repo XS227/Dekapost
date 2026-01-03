@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>دکا پست لاهیجان | نمایندگی سردار جنگل</title>
-  <meta name="description" content="Landing page برای معرفی نمایندگی دکا پست لاهیجان: آدرس، تماس، خدمات اصلی و ثبت درخواست همکاری. برای رهگیری، محاسبه قیمت و بلاگ به سایت اصلی هدایت می‌شوید." />
-  <meta name="theme-color" content="#ffffff" />
+  <meta name="description" content="اطلاعات نمایندگی دکا پست لاهیجان: خدمات، فرم درخواست همکاری، سوالات متداول، آدرس و تماس." />
+  <meta name="theme-color" content="#f4f6f9" />
 
   <style>
     :root{
@@ -22,6 +22,14 @@
       --radius: 18px;
       --radius2: 22px;
       --max: 1180px;
+
+      /* Footer theme (blue like reference) */
+      --footer:#1f4d5a;
+      --footer2:#1a4350;
+      --footerText:#eaf2f6;
+      --footerMuted: rgba(234,242,246,.78);
+      --footerBorder: rgba(255,255,255,.14);
+      --footerLink: rgba(255,255,255,.86);
     }
 
     *{ box-sizing:border-box; }
@@ -69,7 +77,7 @@
       border-radius: 999px;
       color: #6a4200;
       white-space:nowrap;
-      font-weight:700;
+      font-weight:800;
     }
 
     /* Icons */
@@ -109,16 +117,9 @@
       white-space:nowrap;
     }
     .brand img{
-      width:132px;
+      width:140px;
       height:auto;
       filter: drop-shadow(0 10px 20px rgba(18,24,38,.10));
-    }
-    .brand small{
-      display:block;
-      font-weight:700;
-      color:var(--muted);
-      font-size:12px;
-      margin-top:2px;
     }
 
     .menu{
@@ -132,7 +133,7 @@
     .menu a{
       padding:10px 10px;
       color: var(--muted);
-      font-weight:800;
+      font-weight:900;
       font-size:14px;
       transition: color .15s ease;
       white-space:nowrap;
@@ -153,6 +154,7 @@
       box-shadow: 0 10px 24px rgba(18,24,38,.06);
       transition: transform .15s ease, border-color .15s ease, background .15s ease;
       white-space:nowrap;
+      cursor:pointer;
     }
     .btn:hover{
       transform: translateY(-1px);
@@ -205,14 +207,14 @@
       border-radius: var(--radius2);
       overflow:hidden;
       box-shadow: var(--shadow);
-      min-height: 360px;
+      min-height: 380px;
     }
     .hero-media{
       position:absolute; inset:0;
       background:
-        linear-gradient(90deg, rgba(255,255,255,.95) 0%, rgba(255,255,255,.82) 40%, rgba(255,255,255,.40) 70%, rgba(255,255,255,.12) 100%),
+        linear-gradient(90deg, rgba(255,255,255,.95) 0%, rgba(255,255,255,.84) 42%, rgba(255,255,255,.46) 70%, rgba(255,255,255,.18) 100%),
         radial-gradient(900px 520px at 18% 30%, rgba(255,155,0,.16), transparent 60%),
-        url("https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=1600&q=70");
+        url("https://setai.no/logos/dekapost-lahijan.jpg");
       background-size: cover;
       background-position: center;
       transform: scale(1.02);
@@ -223,7 +225,7 @@
       padding: 30px;
       display:flex; flex-direction:column;
       gap: 14px;
-      max-width: 760px;
+      max-width: 780px;
     }
     .kicker{
       display:inline-flex;
@@ -249,8 +251,8 @@
       margin:0;
       color: rgba(18,24,38,.78);
       font-size: 16px;
-      max-width: 58ch;
-      font-weight:700;
+      max-width: 62ch;
+      font-weight:800;
     }
     .hero-actions{ display:flex; gap:12px; flex-wrap:wrap; margin-top: 8px; }
 
@@ -259,7 +261,7 @@
       margin-top: 6px;
       color: var(--muted);
       font-size: 13px;
-      font-weight:800;
+      font-weight:900;
     }
     .pill{
       display:inline-flex; align-items:center; gap:8px;
@@ -280,10 +282,10 @@
       flex-direction:column;
       justify-content:space-between;
       gap: 14px;
-      min-height: 360px;
+      min-height: 380px;
     }
     .side-top h2{ margin:0 0 6px; font-size: 18px; letter-spacing:-.2px; }
-    .side-top p{ margin:0; color: var(--muted); font-size: 14px; font-weight:700; }
+    .side-top p{ margin:0; color: var(--muted); font-size: 14px; font-weight:800; }
     .side-list{ display:grid; gap:10px; margin-top: 10px; }
     .side-item{
       display:flex; gap:10px; align-items:flex-start;
@@ -294,7 +296,7 @@
       box-shadow: var(--shadow2);
     }
     .side-item b{ display:block; font-size:14px; }
-    .side-item span{ display:block; color: var(--muted); font-size: 13px; line-height:1.6; font-weight:700; }
+    .side-item span{ display:block; color: var(--muted); font-size: 13px; line-height:1.6; font-weight:800; }
     .side-item .mini{
       width:34px;height:34px;border-radius: 14px;
       background: rgba(255,155,0,.14);
@@ -311,7 +313,7 @@
       margin-bottom: 16px;
     }
     .section-head h2{ margin:0; font-size: 22px; letter-spacing: -.2px; }
-    .section-head p{ margin:0; color: var(--muted); max-width: 70ch; font-size: 14px; font-weight:700; }
+    .section-head p{ margin:0; color: var(--muted); max-width: 70ch; font-size: 14px; font-weight:800; }
 
     .grid-3{
       display:grid;
@@ -345,7 +347,34 @@
       flex:0 0 auto;
     }
     .card h3{ margin:0; font-size: 16px; letter-spacing:-.15px; }
-    .card p{ margin:0; color: var(--muted); font-size: 14px; font-weight:700; }
+    .card p{ margin:0; color: var(--muted); font-size: 14px; font-weight:800; }
+
+    /* Partner logos */
+    .partners{
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .partner-box{
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.95);
+      border-radius: 14px;
+      box-shadow: var(--shadow2);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding: 14px;
+      min-height: 92px;
+      transition: transform .15s ease, border-color .15s ease;
+    }
+    .partner-box:hover{ transform: translateY(-2px); border-color: rgba(255,155,0,.45); }
+    .partner-box img{
+      max-height: 46px;
+      width:auto;
+      object-fit: contain;
+      filter: saturate(1.02);
+    }
 
     /* Form */
     .form-wrap{
@@ -382,9 +411,9 @@
       color: var(--text);
       outline:none;
       transition: border-color .15s ease, background .15s ease;
-      font-weight:800;
+      font-weight:900;
     }
-    input::placeholder, textarea::placeholder{ color: rgba(91,102,122,.75); font-weight:700; }
+    input::placeholder, textarea::placeholder{ color: rgba(91,102,122,.75); font-weight:800; }
     input:focus, select:focus, textarea:focus{
       border-color: rgba(255,155,0,.70);
       background: rgba(255,255,255,.98);
@@ -398,9 +427,49 @@
       gap:12px; flex-wrap:wrap;
       margin-top: 4px;
     }
-    .hint{ color: var(--muted); font-size: 13px; font-weight:800; }
-    .accent-text{ color: #6a4200; }
+    .hint{ color: var(--muted); font-size: 13px; font-weight:900; }
     .accent-strong{ color: var(--accent); }
+
+    /* FAQ */
+    .faq{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    details{
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.92);
+      border-radius: 16px;
+      overflow:hidden;
+      box-shadow: var(--shadow2);
+      transition: border-color .15s ease;
+    }
+    details[open]{ border-color: rgba(255,155,0,.45); }
+    summary{
+      cursor:pointer;
+      list-style:none;
+      padding: 14px 14px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      font-weight:900;
+    }
+    summary::-webkit-details-marker{ display:none; }
+    .faq p{
+      margin:0;
+      padding: 0 14px 14px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight:800;
+    }
+    .chev{
+      width:18px;height:18px;
+      transition: transform .15s ease;
+      color: rgba(18,24,38,.85);
+    }
+    details[open] .chev{ transform: rotate(180deg); }
 
     /* Contact */
     .contact-grid{
@@ -414,7 +483,7 @@
       margin-top: 10px;
       color: var(--muted);
       font-size: 14px;
-      font-weight:800;
+      font-weight:900;
     }
     .contact-line{
       display:flex; gap: 10px; align-items:flex-start;
@@ -441,52 +510,88 @@
     }
     .map iframe{ width:100%; height:100%; border:0; }
 
-    /* Footer */
+    /* Footer (blue) */
     footer{
-      border-top: 1px solid var(--border);
-      background: rgba(255,255,255,.75);
-      padding: 28px 0 18px;
-      backdrop-filter: blur(10px);
+      border-top: 1px solid var(--footerBorder);
+      background: linear-gradient(180deg, var(--footer) 0%, var(--footer2) 100%);
+      padding: 34px 0 18px;
+      color: var(--footerText);
+      margin-top: 10px;
     }
     .footer-grid{
       display:grid;
-      grid-template-columns: 1.2fr 1fr 1fr 1fr;
-      gap: 14px;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 18px;
       margin-bottom: 16px;
+      align-items:start;
     }
-    .footer-col h4{ margin:0 0 10px; font-size: 14px; letter-spacing: -.1px; }
-    .footer-col p, .footer-col a{
-      color: var(--muted);
-      font-size: 13px;
+    .footer-col h4{
+      margin:0 0 12px;
+      font-size: 15px;
+      letter-spacing: -.1px;
+      color: rgba(255,155,0,.92);
+      font-weight:900;
+    }
+    .footer-col p{
       margin:0;
+      color: var(--footerMuted);
+      font-size: 13px;
       font-weight:800;
     }
-    .footer-links{ display:grid; gap: 8px; }
-    .footer-links a:hover{ color: var(--text); }
+    .footer-links{ display:grid; gap: 10px; margin-top: 12px; }
+    .footer-links a{
+      color: var(--footerLink);
+      font-size: 13px;
+      font-weight:900;
+      opacity:.95;
+    }
+    .footer-links a:hover{ opacity:1; color:#ffffff; text-decoration: underline; text-decoration-color: rgba(255,155,0,.8); }
     .footer-bottom{
       display:flex; align-items:center; justify-content:space-between;
       gap: 10px; flex-wrap:wrap;
       padding-top: 14px;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
+      border-top: 1px solid var(--footerBorder);
+      color: var(--footerMuted);
       font-size: 12px;
-      font-weight:800;
+      font-weight:900;
     }
+    .footer-social{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      margin-top: 14px;
+      flex-wrap:wrap;
+    }
+    .footer-social .icon-btn{
+      border-color: rgba(255,255,255,.18);
+      background: rgba(255,255,255,.06);
+      box-shadow: none;
+    }
+    .footer-social .icon-btn:hover{
+      border-color: rgba(255,155,0,.65);
+      background: rgba(255,155,0,.16);
+    }
+    .footer-social .icon{ color: rgba(255,255,255,.9); }
     .enamad{
-      display:flex; align-items:center; gap:10px;
-      margin-top:10px;
+      margin-top: 14px;
+      display:flex;
+      align-items:center;
+      gap:10px;
     }
     .enamad img{
       width:92px;
       height:auto;
-      border-radius: 14px;
-      border:1px solid var(--border);
-      background:#fff;
-      box-shadow: 0 10px 22px rgba(18,24,38,.08);
-      padding:6px;
+      border-radius: 12px;
+      background: rgba(255,255,255,.92);
+      padding: 8px;
+      border:1px solid rgba(255,255,255,.22);
     }
 
-    /* Responsive */
+    /* Responsive / tablet / mobile */
+    @media (max-width: 1100px){
+      .partners{ grid-template-columns: repeat(3, 1fr); }
+      .footer-grid{ grid-template-columns: 1fr 1fr; }
+    }
     @media (max-width: 980px){
       .menu{ display:none; }
       .burger{ display:inline-flex; }
@@ -496,13 +601,15 @@
       .form-wrap{ grid-template-columns: 1fr; }
       .contact-grid{ grid-template-columns: 1fr; }
       form{ grid-template-columns: 1fr; }
-      .footer-grid{ grid-template-columns: 1fr 1fr; }
-      .brand img{ width:120px; }
+      .brand img{ width:124px; }
+      .partners{ grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 520px){
       .topbar .row{ font-size:12px; }
-      .footer-grid{ grid-template-columns: 1fr; }
       .nav{ padding: 12px 0; }
+      .hero-content{ padding: 22px; }
+      .partner-box{ min-height: 82px; }
+      .partner-box img{ max-height: 40px; }
     }
   </style>
 </head>
@@ -516,7 +623,7 @@
         <div class="right">
           <span class="badge">
             <span style="width:8px;height:8px;border-radius:99px;background:var(--accent);display:inline-block"></span>
-            پاسخگویی: ۸ صبح تا ۲۰ شب
+            شنبه تا چهارشنبه ۹–۱۹ | پنجشنبه ۹–۱۸
           </span>
           <span class="badge">
             <svg class="icon accent" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V21a1 1 0 0 1-1 1C10.07 22 2 13.93 2 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.21 2.2Z"/></svg>
@@ -524,7 +631,6 @@
           </span>
         </div>
 
-        <!-- Social (branch) -->
         <div class="left" aria-label="Sosiale medier">
           <a class="icon-btn" href="https://wa.me/989111449117" target="_blank" rel="noopener" aria-label="WhatsApp">
             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.52 3.48A11.82 11.82 0 0 0 12.05 0C5.43 0 .05 5.38.05 12c0 2.11.55 4.17 1.6 5.99L0 24l6.2-1.63a11.98 11.98 0 0 0 5.8 1.48h.01c6.62 0 12-5.38 12-12 0-3.2-1.25-6.21-3.49-8.37Z"/></svg>
@@ -543,23 +649,20 @@
     </div>
   </div>
 
-  <!-- Header / Nav -->
+  <!-- Header -->
   <header>
     <div class="container">
       <div class="nav">
         <a class="brand" href="#top" aria-label="DekaPost Lahijan">
-          <img src="https://dekapost.com/_DouranPortal/logos/fa-IR/logo.png" alt="DekaPost Logo" />
-          <span>
-            <small>Landing page: نمایندگی لاهیجان</small>
-          </span>
+          <img src="https://setai.no/logos/dekapost.png" alt="DekaPost Logo" />
         </a>
 
-        <!-- Viktig: Blogg/Pris/Sporing er eksterne (hovedavdeling) -->
         <nav class="menu" aria-label="Meny">
           <a href="#services">خدمات</a>
+          <a href="#partners">مشتریان</a>
           <a href="https://price.dekapost.ir" target="_blank" rel="noopener">برآورد هزینه</a>
           <a href="https://tracking.dekapost.ir" target="_blank" rel="noopener">رهگیری</a>
-          <a href="https://dekapost.com/fa-IR/dekapost/4953/page/%D9%85%D9%82%D8%A7%D9%84%D8%A7%D8%AA-" target="_blank" rel="noopener">بلاگ</a>
+          <a href="https://dekapost-gls.ir/%D9%88%D8%A8%D9%84%D8%A7%DA%AF/" target="_blank" rel="noopener">بلاگ</a>
           <a href="#contact">تماس</a>
         </nav>
 
@@ -573,9 +676,10 @@
 
       <div class="mobile-drawer" id="drawer" aria-label="Mobilmeny">
         <a href="#services">خدمات</a>
-        <a href="https://price.dekapost.ir" target="_blank" rel="noopener">برآورد هزینه (سایت اصلی)</a>
-        <a href="https://tracking.dekapost.ir" target="_blank" rel="noopener">رهگیری (سایت اصلی)</a>
-        <a href="https://dekapost.com/fa-IR/dekapost/4953/page/%D9%85%D9%82%D8%A7%D9%84%D8%A7%D8%AA-" target="_blank" rel="noopener">بلاگ (سایت اصلی)</a>
+        <a href="#partners">مشتریان</a>
+        <a href="https://price.dekapost.ir" target="_blank" rel="noopener">برآورد هزینه</a>
+        <a href="https://tracking.dekapost.ir" target="_blank" rel="noopener">رهگیری</a>
+        <a href="https://dekapost-gls.ir/%D9%88%D8%A8%D9%84%D8%A7%DA%AF/" target="_blank" rel="noopener">بلاگ</a>
         <a href="#contact">تماس</a>
         <a href="#request" style="border-color:rgba(255,155,0,.55);">درخواست همکاری</a>
       </div>
@@ -583,23 +687,23 @@
   </header>
 
   <main id="top">
+
     <!-- Hero -->
     <div class="container hero">
       <div class="hero-grid">
         <section class="hero-card" aria-label="Hero">
-          <div class="hero-media" role="img" aria-label="حمل و نقل و ارسال مرسوله"></div>
+          <div class="hero-media" role="img" aria-label="DekaPost Lahijan"></div>
           <div class="hero-content">
             <div class="kicker"><span class="dot"></span> نمایندگی سردار جنگل لاهیجان</div>
-            <h1>اطلاعات نمایندگی دکا پست لاهیجان</h1>
+            <h1>ارسال، جمع‌آوری و پشتیبانی محلی در لاهیجان</h1>
             <p class="lead">
-              این صفحه فقط برای معرفی نمایندگی لاهیجان است. برای <span class="accent-strong">رهگیری</span>،
-              <span class="accent-strong">محاسبه قیمت</span> و <span class="accent-strong">بلاگ</span> به سایت‌های اصلی دکا پست هدایت می‌شوید.
+              خدمات ارسال بین‌شهری، جمع‌آوری در محل و پیگیری سریع با ارتباط مستقیم با نمایندگی.
             </p>
 
             <div class="hero-actions">
               <a class="btn primary" href="#request">ثبت درخواست همکاری</a>
-              <a class="btn" href="https://wa.me/989111449117" target="_blank" rel="noopener">واتساپ نمایندگی</a>
-              <a class="btn" href="https://tracking.dekapost.ir" target="_blank" rel="noopener">رهگیری (سایت اصلی)</a>
+              <a class="btn" href="https://wa.me/989111449117" target="_blank" rel="noopener">واتساپ</a>
+              <a class="btn" href="tel:+989111449117">تماس</a>
             </div>
 
             <div class="trust-row" aria-label="Highlights">
@@ -621,8 +725,8 @@
 
         <aside class="hero-side" aria-label="Quick info">
           <div class="side-top">
-            <h2>می‌خواهید همکاری کنید؟</h2>
-            <p>اگر فروشگاه دارید، فرم را ثبت کنید تا برای هماهنگی و جمع‌آوری تماس گرفته شود.</p>
+            <h2>برای فروشگاه‌ها و کسب‌وکارها</h2>
+            <p>اگر ارسال روزانه دارید، فرم را تکمیل کنید تا هماهنگی انجام شود.</p>
 
             <div class="side-list">
               <div class="side-item">
@@ -631,7 +735,7 @@
                 </div>
                 <div>
                   <b>هماهنگی سریع</b>
-                  <span>تماس مستقیم با نمایندگی لاهیجان</span>
+                  <span>تماس مستقیم با نمایندگی</span>
                 </div>
               </div>
               <div class="side-item">
@@ -639,8 +743,8 @@
                   <svg class="icon accent" viewBox="0 0 24 24"><path d="M7 7h10v2H7V7Zm0 4h10v2H7v-2Zm0 4h6v2H7v-2Z"/></svg>
                 </div>
                 <div>
-                  <b>مسیرهای اصلی</b>
-                  <span>رهگیری و قیمت از سایت‌های اصلی دکا پست</span>
+                  <b>فرآیند استاندارد</b>
+                  <span>ثبت اطلاعات و پیگیری شفاف</span>
                 </div>
               </div>
               <div class="side-item">
@@ -648,8 +752,8 @@
                   <svg class="icon accent" viewBox="0 0 24 24"><path d="M4 6h16v12H4V6Zm2 2v8h12V8H6Z"/></svg>
                 </div>
                 <div>
-                  <b>شفاف و ساده</b>
-                  <span>تمرکز روی اطلاعات شعبه (Landing)</span>
+                  <b>مناسب ارسال‌های روزانه</b>
+                  <span>مدیریت بهتر حجم ارسال</span>
                 </div>
               </div>
             </div>
@@ -657,8 +761,8 @@
 
           <div style="display:flex; gap:10px; flex-wrap:wrap;">
             <a class="btn primary" href="#request">درخواست همکاری</a>
-            <a class="btn" href="tel:+989111449117">تماس</a>
             <a class="btn" href="https://price.dekapost.ir" target="_blank" rel="noopener">محاسبه قیمت</a>
+            <a class="btn" href="https://tracking.dekapost.ir" target="_blank" rel="noopener">رهگیری</a>
           </div>
         </aside>
       </div>
@@ -670,7 +774,7 @@
         <div class="section-head">
           <div>
             <h2>خدمات نمایندگی لاهیجان</h2>
-            <p>خلاصه سرویس‌ها برای مراجعه‌کنندگان این شعبه. رهگیری/قیمت/بلاگ به صفحات اصلی ارجاع داده می‌شود.</p>
+            <p>سرویس‌ها برای ارسال سریع، دقت در تحویل و پشتیبانی واقعی.</p>
           </div>
         </div>
 
@@ -700,10 +804,32 @@
               <div class="iconbox" aria-hidden="true">
                 <svg class="icon accent" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-4 12.74V22l4-2 4 2v-7.26A7 7 0 0 0 12 2Zm0 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10Z"/></svg>
               </div>
-              <h3>پشتیبانی نمایندگی</h3>
+              <h3>پشتیبانی محلی</h3>
             </div>
-            <p>واتساپ و تماس مستقیم برای پیگیری و هماهنگی.</p>
+            <p>واتساپ و تماس مستقیم برای هماهنگی و پیگیری.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partners -->
+    <section id="partners">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>برخی از مشتریان</h2>
+            <p>نمونه‌ای از برندهایی که از خدمات استفاده کرده‌اند.</p>
+          </div>
+        </div>
+
+        <div class="partners" aria-label="Partner logos">
+          <div class="partner-box"><img alt="Partner logo 1" src="https://dekapost.com/_douranportal/images/jpeg-optimizer_logo6.png"></div>
+          <div class="partner-box"><img alt="Partner logo 2" src="https://dekapost.com/_douranportal/images/jpeg-optimizer_logo5.png"></div>
+          <div class="partner-box"><img alt="Partner logo 3" src="https://dekapost.com/_douranportal/images/jpeg-optimizer_logo4.png"></div>
+          <div class="partner-box"><img alt="Partner logo 4" src="https://dekapost.com/_douranportal/images/jpeg-optimizer_logo3.png"></div>
+
+          <div class="partner-box"><img alt="Partner logo 5" src="https://dekapost.com/_douranportal/images/jpeg-optimizer_logo2.png"></div>
+          <div class="partner-box"><img alt="Partner logo 6" src="https://dekapost.com/_douranportal/images/jpeg-optimizer_logo1.png"></div>
         </div>
       </div>
     </section>
@@ -713,17 +839,14 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <h2>فرم درخواست همکاری (نمایندگی لاهیجان)</h2>
-            <p>برای شروع همکاری فروشگاهی، اطلاعات را ثبت کنید تا تماس گرفته شود.</p>
+            <h2>فرم درخواست همکاری</h2>
+            <p>اطلاعات را ثبت کنید تا برای هماهنگی تماس گرفته شود.</p>
           </div>
         </div>
 
         <div class="form-wrap">
           <div class="panel">
             <h3 style="margin:0; font-size:16px;">ثبت درخواست</h3>
-            <p style="margin:6px 0 0; color:var(--muted); font-size:14px; font-weight:800;">
-              این فرم نمونه است. می‌توانید آن را به سیستم واقعی خود متصل کنید.
-            </p>
 
             <form action="#" method="post" autocomplete="on">
               <div class="field">
@@ -768,24 +891,77 @@
               <div class="form-actions">
                 <button class="btn primary" type="submit">ارسال درخواست</button>
                 <span class="hint">
-                  سریع‌تر: <a class="accent-strong" href="https://wa.me/989111449117" target="_blank" rel="noopener">پیام در واتساپ</a>
+                  <a class="accent-strong" href="https://wa.me/989111449117" target="_blank" rel="noopener">واتساپ</a>
+                  یا
+                  <a class="accent-strong" href="tel:+989111449117">تماس</a>
                 </span>
               </div>
             </form>
           </div>
 
           <aside class="panel">
-            <h3 style="margin:0; font-size:16px;">لینک‌های اصلی (خارج از این لندینگ)</h3>
-            <p style="margin:6px 0 0; color:var(--muted); font-size:14px; font-weight:800;">
-              رهگیری، محاسبه قیمت و بلاگ در صفحات اصلی دکا پست هستند.
-            </p>
-
+            <h3 style="margin:0; font-size:16px;">لینک‌های سریع</h3>
             <div style="display:grid; gap:10px; margin-top:12px;">
-              <a class="btn" href="https://tracking.dekapost.ir" target="_blank" rel="noopener">رهگیری مرسوله (tracking.dekapost.ir)</a>
-              <a class="btn" href="https://price.dekapost.ir" target="_blank" rel="noopener">محاسبه نرخ (price.dekapost.ir)</a>
-              <a class="btn" href="https://dekapost.com/fa-IR/dekapost/4953/page/%D9%85%D9%82%D8%A7%D9%84%D8%A7%D8%AA-" target="_blank" rel="noopener">بلاگ/مقالات (dekapost.com)</a>
+              <a class="btn" href="https://tracking.dekapost.ir" target="_blank" rel="noopener">رهگیری مرسوله</a>
+              <a class="btn" href="https://price.dekapost.ir" target="_blank" rel="noopener">برآورد هزینه ارسال</a>
+              <a class="btn" href="https://dekapost-gls.ir/%D9%88%D8%A8%D9%84%D8%A7%DA%AF/" target="_blank" rel="noopener">بلاگ</a>
+              <a class="btn" href="#faq">سوالات متداول</a>
             </div>
           </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ (copied from dekapost-gls.ir) -->
+    <section id="faq">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>سوالات متداول</h2>
+            <p>پاسخ‌های رایج درباره خدمات و پذیرش مرسوله.</p>
+          </div>
+        </div>
+
+        <div class="faq" aria-label="FAQ">
+          <details>
+            <summary>
+              <span>ساعت کاری نمایندگی دکا پست لاهیجان به چه صورتی است؟</span>
+              <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 15.5 5 8.5l1.4-1.4L12 12.7l5.6-5.6L19 8.5l-7 7Z"/></svg>
+            </summary>
+            <p>دکا پست نمایندگی لاهیجان در روزهای شنبه تا چهارشنبه از ساعت 9 صبح الی 19 و روزهای پنجشنبه از ساعت 9 صبح الی 18 پاسخگوی مشتریان گرامی است، اما عملیات و فرایندهای حمل و تحویل مرسولات به صورت بی وقفه، 24 ساعته در 7 روز هفته برقرار است. همچنین پشتیبانی آنلاین و مرکز تماس مشتریان دکا پست نیز هر روز هفته از 8 صبح تا 22 فعال و پاسخگوست.</p>
+          </details>
+
+          <details>
+            <summary>
+              <span>چه نوع مرسولاتی را دکا پست می پذیرد ؟</span>
+              <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 15.5 5 8.5l1.4-1.4L12 12.7l5.6-5.6L19 8.5l-7 7Z"/></svg>
+            </summary>
+            <p>تمامی مرسولات مجاز و قانونی در دکاپست پذیرفته میشوند.</p>
+          </details>
+
+          <details>
+            <summary>
+              <span>زمان تحویل مرسولات در دکا پست چگونه است؟</span>
+              <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 15.5 5 8.5l1.4-1.4L12 12.7l5.6-5.6L19 8.5l-7 7Z"/></svg>
+            </summary>
+            <p>تمامی زیرساختها و برنامه ریزی های انجام شده در دکاپست بر این اصل استوار شده که مرسولات در زمان مقرر تحویل داده شوند، ما به شما تعهد میدهیم که نهایت تلاش پرسنل و برند دکاپست بر «به هنگام بودن» است.</p>
+          </details>
+
+          <details>
+            <summary>
+              <span>تعهدات دکا پست در خصوص دقت و سلامت در تحویل مرسولات چیست؟</span>
+              <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 15.5 5 8.5l1.4-1.4L12 12.7l5.6-5.6L19 8.5l-7 7Z"/></svg>
+            </summary>
+            <p>ما به شما تعهد می دهیم که بر امانتداری و دقت و مراقبت از مرسولات پیشگام هستیم و این توانمندی خود را آن قدر باور داریم که اگر قصور ناخودآگاه و اجتناب ناپذیری در فرایند حمل و تحویل مرسولات رخ داد، مسئولیت آن را به طور کامل خواهیم پذیرفت. چرا که از ارزش های سازمانی دکا پست رعایت حقوق مشتریان و احترام به حسن انتخاب آنان است.</p>
+          </details>
+
+          <details>
+            <summary>
+              <span>به لحاظ وزن و حجم، آیا محدودیتی در پذیرش مرسولات وجود دارد؟</span>
+              <svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 15.5 5 8.5l1.4-1.4L12 12.7l5.6-5.6L19 8.5l-7 7Z"/></svg>
+            </summary>
+            <p>یکی از مزیتهای رقابتی دکا پست، پذیرش تمامی مرسولات قانونی بدون محدودیت ابعادی و وزنی است، بر این اساس مفتخریم که برای اولین بار در کشور عزیزمان خیال مشتریان را از نگرانی های مرسولات خاص که ابعاد یا وزن بالایی دارند، آسوده کنیم.</p>
+          </details>
         </div>
       </div>
     </section>
@@ -796,7 +972,7 @@
         <div class="section-head">
           <div>
             <h2>تماس با نمایندگی لاهیجان</h2>
-            <p>اطلاعات تماس و آدرس نمایندگی برای مراجعه‌کنندگان.</p>
+            <p>آدرس و اطلاعات تماس.</p>
           </div>
         </div>
 
@@ -871,64 +1047,69 @@
 
   </main>
 
-  <!-- Footer -->
+  <!-- Footer (blue like reference) -->
   <footer>
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
-          <h4>دکا پست | نمایندگی لاهیجان</h4>
-          <p>این صفحه یک لندینگ برای اطلاعات شعبه لاهیجان است. سرویس‌های رهگیری/قیمت/مقالات از سایت اصلی ارائه می‌شوند.</p>
+          <h4>درباره ما</h4>
+          <p>
+            دکا پست اپراتور پستی خصوصی در ایران است که در پذیرش انواع مرسولات، محدودیت ابعاد، وزن و مکان جغرافیایی ندارد
+            و خدمات خود را در سطح داخلی و بین‌الملل ارائه می‌کند.
+          </p>
 
           <div class="enamad">
-            <a href="https://trustseal.enamad.ir/?id=345497&Code=4l4qNFTCr9Dic7ZGsI47leBm48N83N9g" target="_blank" rel="noopener" aria-label="Enamad">
-              <img src="https://trustseal.enamad.ir/logo.aspx?id=345497&Code=4l4qNFTCr9Dic7ZGsI47leBm48N83N9g" alt="Enamad" />
+            <a href="#" aria-label="Enamad">
+              <img src="https://setai.no/logos/enamad.png" alt="Enamad" />
             </a>
           </div>
-        </div>
 
-        <div class="footer-col">
-          <h4>لینک‌های اصلی</h4>
-          <div class="footer-links">
-            <a href="https://dekapost.com" target="_blank" rel="noopener">سایت اصلی دکا پست</a>
-            <a href="https://tracking.dekapost.ir" target="_blank" rel="noopener">رهگیری مرسوله</a>
-            <a href="https://price.dekapost.ir" target="_blank" rel="noopener">محاسبه نرخ</a>
-            <a href="https://dekapost.com/fa-IR/dekapost/4953/page/%D9%85%D9%82%D8%A7%D9%84%D8%A7%D8%AA-" target="_blank" rel="noopener">بلاگ/مقالات</a>
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <h4>تماس</h4>
-          <div class="footer-links">
-            <a href="tel:+981341216064">01341216064</a>
-            <a href="tel:+989111449117">09111449117</a>
-            <a href="mailto:dekapost.gls@gmail.com">dekapost.gls@gmail.com</a>
-            <a href="https://wa.me/989111449117" target="_blank" rel="noopener">WhatsApp</a>
-          </div>
-        </div>
-
-        <div class="footer-col">
-          <h4>شبکه‌های اجتماعی</h4>
-          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <div class="footer-social" aria-label="Social">
+            <a class="icon-btn" href="https://wa.me/989111449117" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.52 3.48A11.82 11.82 0 0 0 12.05 0C5.43 0 .05 5.38.05 12c0 2.11.55 4.17 1.6 5.99L0 24l6.2-1.63a11.98 11.98 0 0 0 5.8 1.48h.01c6.62 0 12-5.38 12-12 0-3.2-1.25-6.21-3.49-8.37Z"/></svg>
+            </a>
             <a class="icon-btn" href="https://www.instagram.com/dekapost_lahijan_golshahi" target="_blank" rel="noopener" aria-label="Instagram">
               <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7Z"/></svg>
             </a>
             <a class="icon-btn" href="https://t.me/golshahi_aradi" target="_blank" rel="noopener" aria-label="Telegram">
               <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.04 15.44 8.9 19.5c.59 0 .85-.25 1.16-.55l2.78-2.66 5.76 4.21c1.06.58 1.81.28 2.08-.98L23.98 3.9c.33-1.55-.56-2.16-1.59-1.78L1.58 10.05c-1.5.58-1.48 1.41-.27 1.78l5.32 1.66L19.02 6.3c.59-.39 1.13-.17.69.22Z"/></svg>
             </a>
-            <a class="icon-btn" href="https://wa.me/989111449117" target="_blank" rel="noopener" aria-label="WhatsApp">
-              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.52 3.48A11.82 11.82 0 0 0 12.05 0C5.43 0 .05 5.38.05 12c0 2.11.55 4.17 1.6 5.99L0 24l6.2-1.63a11.98 11.98 0 0 0 5.8 1.48h.01c6.62 0 12-5.38 12-12 0-3.2-1.25-6.21-3.49-8.37Z"/></svg>
-            </a>
           </div>
+        </div>
 
-          <p style="margin-top:10px;">
-            <span class="accent-text">پاسخگویی:</span> ۸ تا ۲۰
-          </p>
+        <div class="footer-col">
+          <h4>دکاپست</h4>
+          <div class="footer-links">
+            <a href="https://dekapost.com" target="_blank" rel="noopener">درباره ما</a>
+            <a href="https://dekapost.com/fa-IR/dekapost/4920/page/%D9%86%D9%85%D8%A7%DB%8C%D9%86%D8%AF%DA%AF%DB%8C-%D9%87%D8%A7" target="_blank" rel="noopener">نمایندگی‌ها</a>
+            <a href="https://dekapost.com/fa-IR/dekapost/4982/page/%D8%B3%D9%88%D8%A7%D9%84%D8%A7%D8%AA-%D9%85%D8%AA%D8%AF%D8%A7%D9%88%D9%84-" target="_blank" rel="noopener">سوالات متداول</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>دسترسی سریع</h4>
+          <div class="footer-links">
+            <a href="https://price.dekapost.ir" target="_blank" rel="noopener">برآورد هزینه</a>
+            <a href="https://tracking.dekapost.ir" target="_blank" rel="noopener">رهگیری مرسوله</a>
+            <a href="https://dekapost-gls.ir/%D9%88%D8%A8%D9%84%D8%A7%DA%AF/" target="_blank" rel="noopener">بلاگ</a>
+            <a href="#request">درخواست همکاری</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>پیوندها</h4>
+          <div class="footer-links">
+            <a href="#services">خدمات لاهیجان</a>
+            <a href="#partners">برخی مشتریان</a>
+            <a href="#faq">سوالات متداول</a>
+            <a href="#contact">تماس با ما</a>
+          </div>
         </div>
       </div>
 
       <div class="footer-bottom">
         <span>© تمامی حقوق محفوظ است.</span>
-        <span>Design &amp; Development by <span class="accent-strong">Setaei</span></span>
+        <span>Design &amp; Development by <span style="color:rgba(255,155,0,.92);">Setaei</span></span>
       </div>
     </div>
   </footer>

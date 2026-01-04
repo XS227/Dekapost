@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>دکا پست فومن | نمایندگی دکاپست</title>
+  <meta name="description" content="اطلاعات نمایندگی دکا پست فومن: خدمات، فرم درخواست همکاری و قیمت، سوالات متداول و تماس." />
+  <meta name="theme-color" content="#f4f6f9" />
+
+  <style>
+    :root{
+      --accent:#ff9b00;
+      --bg:#f4f6f9;
+      --bg2:#ffffff;
+      --text:#121826;
+      --muted:#5b667a;
+      --border:rgba(18,24,38,.12);
+      --shadow:0 18px 45px rgba(18,24,38,.10);
+      --shadow2:0 10px 28px rgba(18,24,38,.08);
+      --radius:18px;
+      --radius2:22px;
+      --max:1180px;
+
+      --footer:#1f4d5a;
+      --footer2:#1a4350;
+      --footerText:#eaf2f6;
+      --footerMuted:rgba(234,242,246,.78);
+      --footerBorder:rgba(255,255,255,.14);
+      --footerLink:rgba(255,255,255,.86);
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#fff 0%,var(--bg) 100%);
+      color:var(--text);
+      font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial;
+      line-height:1.75;
+    }
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%}
+    .container{width:min(var(--max),calc(100% - 32px));margin:auto}
+
+    header{
+      position:sticky;top:0;z-index:10;
+      background:rgba(255,255,255,.9);
+      border-bottom:1px solid var(--border)
+    }
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+    .brand img{width:140px}
+
+    .btn{
+      padding:11px 16px;
+      border-radius:14px;
+      border:1px solid var(--border);
+      background:#fff;
+      font-weight:900;
+      cursor:pointer
+    }
+    .btn.primary{
+      background:linear-gradient(135deg,#ff9b00,#ffb23f);
+      border-color:#ff9b00
+    }
+
+    .hero{
+      margin-top:20px
+    }
+    .hero-card{
+      position:relative;
+      border-radius:22px;
+      overflow:hidden;
+      min-height:380px;
+      box-shadow:var(--shadow)
+    }
+    .hero-media{
+      position:absolute;inset:0;
+      background:
+        linear-gradient(90deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,.7) 55%,rgba(255,255,255,.2) 100%),
+        url("https://setai.no/logos/fouman.jpg");
+      background-size:cover;
+      background-position:center
+    }
+    .hero-content{
+      position:relative;
+      padding:32px;
+      max-width:700px
+    }
+    h1{margin:10px 0;font-size:34px}
+    .lead{color:var(--muted);font-weight:800}
+
+    section{padding:36px 0}
+    h2{margin-bottom:10px}
+
+    .services{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+      gap:14px
+    }
+    .svc{
+      border:1px solid var(--border);
+      background:#fff;
+      padding:18px;
+      border-radius:18px;
+      text-align:center;
+      font-weight:900
+    }
+
+    form{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px
+    }
+    input,textarea,select{
+      padding:12px;
+      border-radius:14px;
+      border:1px solid var(--border);
+      font-weight:900
+    }
+    textarea{grid-column:1/-1}
+
+    .contact-box{
+      border:1px solid var(--border);
+      background:#fff;
+      padding:18px;
+      border-radius:22px
+    }
+
+    footer{
+      margin-top:40px;
+      background:linear-gradient(180deg,var(--footer),var(--footer2));
+      color:var(--footerText);
+      padding:30px 0
+    }
+    footer p{font-size:13px}
+
+    @media(max-width:768px){
+      form{grid-template-columns:1fr}
+      h1{font-size:26px}
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#">
+      <img src="https://setai.no/logos/dekapost.png" alt="DekaPost">
+    </a>
+    <a class="btn primary" href="#request">درخواست همکاری</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- Hero -->
+  <section class="container hero">
+    <div class="hero-card">
+      <div class="hero-media"></div>
+      <div class="hero-content">
+        <div style="font-weight:900;color:#6a4200">نمایندگی دکاپست فومن</div>
+        <h1>ارسال، جمع‌آوری و پشتیبانی محلی در فومن</h1>
+        <p class="lead">
+          خدمات ارسال بین‌شهری، جمع‌آوری در محل و پیگیری سریع با ارتباط مستقیم با نمایندگی فومن
+        </p>
+        <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn primary" href="#request">درخواست همکاری / قیمت</a>
+          <a class="btn" href="https://wa.me/989118461180" target="_blank">واتساپ</a>
+          <a class="btn" href="tel:+989118461180">تماس</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="container">
+    <h2>خدمات دکاپست فومن</h2>
+    <div class="services">
+      <div class="svc">جمع‌آوری در محل</div>
+      <div class="svc">ارسال بین‌شهری</div>
+      <div class="svc">رهگیری مرسوله</div>
+      <div class="svc">پشتیبانی مشتریان</div>
+    </div>
+  </section>
+
+  <!-- Request Form -->
+  <section id="request" class="container">
+    <h2>فرم درخواست همکاری / قیمت</h2>
+
+    <form action="https://formsubmit.co/arminfaridnaserkiyadeh@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="درخواست قیمت / همکاری – دکاپست فومن">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+
+      <input type="text" name="fullname" placeholder="نام و نام خانوادگی" required>
+      <input type="tel" name="phone" placeholder="شماره تماس" required>
+      <input type="text" name="shop" placeholder="نام فروشگاه">
+      <input type="text" name="city" placeholder="شهر مقصد">
+      <textarea name="message" placeholder="توضیحات (وزن، تعداد، مقصد و ...)"></textarea>
+
+      <button class="btn primary" type="submit">ارسال درخواست</button>
+    </form>
+  </section>
+
+  <!-- Contact -->
+  <section class="container">
+    <h2>تماس با نمایندگی فومن</h2>
+    <div class="contact-box">
+      <p><b>تلفن:</b> 09118461180 – 01334730225</p>
+      <p><b>اینستاگرام:</b> @deka.postfouman</p>
+      <p><b>کد پستی:</b> 1307002</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p>
+      © تمامی حقوق محفوظ است – دکاپست فومن<br>
+      Design & Development by <b style="color:#ff9b00">Setaei</b>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
